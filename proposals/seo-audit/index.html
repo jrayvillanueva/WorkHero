@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Free SEO &amp; AI Search Audit | Work Hero</title>
-<meta name="description" content="Run a free SEO and AI-search audit of your website. Get your scores, Core Web Vitals, and prioritized issues in seconds.">
+<meta name="description" content="Run a free SEO and AI-search audit of your website. Get your scores, Core Web Vitals, on-page findings, and AI-readiness signals in seconds.">
 <style>
 @font-face{
   font-family:'grifterbold';
@@ -23,40 +23,27 @@
 }
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{
-  margin:0;font-family:var(--wh-font-body);font-size:16px;font-weight:500;line-height:1.62;
-  color:var(--wh-black);background:var(--wh-cream);
-}
+body{margin:0;font-family:var(--wh-font-body);font-size:16px;font-weight:500;line-height:1.62;color:var(--wh-black);background:var(--wh-cream);}
 a{color:inherit;}
 h1,h2,h3,h4{font-family:var(--wh-font-display);color:var(--wh-black);margin:0 0 .4em;letter-spacing:.4px;}
 h1{font-size:46px;line-height:1.04;letter-spacing:1px;}
 h2{font-size:28px;line-height:1.12;letter-spacing:.6px;}
 h3{font-size:18px;line-height:1.24;letter-spacing:.4px;}
 
-/* ---------- header ---------- */
-.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 34px;
-  background:var(--wh-sky);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 34px;background:var(--wh-sky);}
 .logo{font-family:var(--wh-font-display);font-size:22px;letter-spacing:.5px;display:flex;align-items:center;gap:8px;}
-.logo .mark{width:22px;height:22px;background:var(--wh-black);border-radius:5px;display:inline-block;
-  position:relative;}
+.logo .mark{width:22px;height:22px;background:var(--wh-black);border-radius:5px;display:inline-block;position:relative;}
 .logo .mark::before{content:'';position:absolute;inset:5px 5px auto 5px;height:3px;background:var(--wh-yellow);box-shadow:0 5px 0 var(--wh-yellow);}
 .nav .btn-book{font-size:13px;padding:11px 20px;}
 
-.btn{display:inline-block;font-family:var(--wh-font-display);letter-spacing:.5px;
-  border:none;cursor:pointer;text-decoration:none;text-align:center;
-  border-radius:var(--wh-radius-pill);padding:15px 30px;font-size:15px;transition:transform .12s ease,box-shadow .12s ease;}
+.btn{display:inline-block;font-family:var(--wh-font-display);letter-spacing:.5px;border:none;cursor:pointer;text-decoration:none;text-align:center;border-radius:var(--wh-radius-pill);padding:15px 30px;font-size:15px;transition:transform .12s ease,box-shadow .12s ease;}
 .btn:active{transform:translateY(1px);}
 .btn-dark{background:var(--wh-black);color:var(--wh-white);box-shadow:0 6px 0 rgba(0,0,0,.18);}
 .btn-dark:hover{box-shadow:0 9px 22px -8px rgba(0,0,0,.55);}
 .btn-yellow{background:var(--wh-yellow);color:var(--wh-black);box-shadow:0 6px 0 #ca9c1e;}
 .btn-yellow:hover{filter:brightness(1.03);}
 
-/* ---------- hero ---------- */
 .hero{background:var(--wh-sky);padding:34px 24px 74px;text-align:center;position:relative;overflow:hidden;}
-.hero .kicker{font-family:var(--wh-font-display);letter-spacing:2px;font-size:12.5px;text-transform:uppercase;
-  background:var(--wh-black);color:var(--wh-yellow);display:inline-block;padding:6px 16px;border-radius:var(--wh-radius-pill);margin-bottom:18px;}
-.hero h1{max-width:760px;margin:0 auto 14px;}
-.hero p.lede{max-width:600px;margin:0 auto 26px;font-size:17px;color:#12305a;}
 .hero > :not(.doodle){position:relative;z-index:2;}
 .hero .doodle{position:absolute;pointer-events:none;opacity:.85;z-index:0;}
 .d1{left:-40px;top:30px;width:96px;color:var(--wh-yellow);}
@@ -64,51 +51,40 @@ h3{font-size:18px;line-height:1.24;letter-spacing:.4px;}
 .d3{left:28px;bottom:18px;width:58px;color:var(--wh-black);}
 .d4{right:50px;bottom:26px;width:52px;color:var(--wh-orange);}
 @media(max-width:760px){ .d1,.d2{display:none;} }
+.hero .kicker{font-family:var(--wh-font-display);letter-spacing:2px;font-size:12.5px;text-transform:uppercase;background:var(--wh-black);color:var(--wh-yellow);display:inline-block;padding:6px 16px;border-radius:var(--wh-radius-pill);margin-bottom:18px;}
+.hero h1{max-width:760px;margin:0 auto 14px;}
+.hero p.lede{max-width:600px;margin:0 auto 26px;font-size:17px;color:#12305a;}
 
-/* ---------- audit form ---------- */
-.auditbox{max-width:640px;margin:0 auto;background:var(--wh-white);border:2px solid var(--wh-black);
-  border-radius:16px;padding:10px;display:flex;gap:10px;box-shadow:0 12px 0 rgba(0,0,0,.14);flex-wrap:wrap;}
-.auditbox input{flex:1;min-width:220px;border:none;outline:none;font-family:var(--wh-font-body);
-  font-size:16px;font-weight:500;padding:14px 16px;border-radius:12px;color:var(--wh-black);}
+.auditbox{max-width:640px;margin:0 auto;background:var(--wh-white);border:2px solid var(--wh-black);border-radius:16px;padding:10px;display:flex;gap:10px;box-shadow:0 12px 0 rgba(0,0,0,.14);flex-wrap:wrap;}
+.auditbox input{flex:1;min-width:220px;border:none;outline:none;font-family:var(--wh-font-body);font-size:16px;font-weight:500;padding:14px 16px;border-radius:12px;color:var(--wh-black);}
 .auditbox input::placeholder{color:#9aa1ad;}
 .auditbox .btn{white-space:nowrap;}
 .form-hint{font-size:12.5px;color:#12305a;margin-top:12px;}
 
-/* ---------- main ---------- */
 .main{max-width:1000px;margin:0 auto;padding:0 24px 90px;}
 .results{margin-top:-42px;}
 .hidden{display:none !important;}
 
-/* loading */
-.loading{background:var(--wh-white);border:1px solid var(--wh-grey-light);border-radius:var(--wh-radius-card);
-  padding:44px 28px;text-align:center;box-shadow:0 20px 50px -30px rgba(0,0,0,.4);}
-.spinner{width:44px;height:44px;border-radius:50%;border:5px solid var(--wh-grey-light);
-  border-top-color:var(--wh-black);margin:0 auto 20px;animation:spin 0.8s linear infinite;}
+.loading{background:var(--wh-white);border:1px solid var(--wh-grey-light);border-radius:var(--wh-radius-card);padding:44px 28px;text-align:center;box-shadow:0 20px 50px -30px rgba(0,0,0,.4);}
+.spinner{width:44px;height:44px;border-radius:50%;border:5px solid var(--wh-grey-light);border-top-color:var(--wh-black);margin:0 auto 20px;animation:spin .8s linear infinite;}
 @keyframes spin{to{transform:rotate(360deg);}}
 .loading .lmsg{font-family:var(--wh-font-display);font-size:17px;letter-spacing:.4px;}
 .loading .lurl{font-size:13px;color:var(--wh-grey-dim);margin-top:6px;word-break:break-all;}
 
-/* error */
-.errbox{background:#fff2f2;border:1px solid var(--wh-red);border-radius:var(--wh-radius-card);
-  padding:22px 24px;color:#8a1f24;}
+.errbox{background:#fff2f2;border:1px solid var(--wh-red);border-radius:var(--wh-radius-card);padding:22px 24px;color:#8a1f24;}
 .errbox strong{color:#8a1f24;}
+.notice{background:#fff8e6;border:1px solid var(--wh-yellow);border-radius:10px;padding:12px 16px;font-size:13.5px;color:#6a5400;margin-top:14px;}
 
-/* score summary */
-.scorehead{background:var(--wh-white);border:1px solid var(--wh-grey-light);border-radius:var(--wh-radius-card);
-  padding:26px 28px;box-shadow:0 20px 50px -30px rgba(0,0,0,.4);}
+.scorehead{background:var(--wh-white);border:1px solid var(--wh-grey-light);border-radius:var(--wh-radius-card);padding:26px 28px;box-shadow:0 20px 50px -30px rgba(0,0,0,.4);}
 .scorehead .target{font-size:14px;color:var(--wh-grey-dim);word-break:break-all;margin-bottom:2px;}
 .scorehead .target b{color:var(--wh-black);font-family:var(--wh-font-display);font-weight:400;}
-.rings{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px;}
+.rings{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:20px;}
 .ring{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;}
-.gauge{--v:0;--c:var(--wh-green);width:96px;height:96px;border-radius:50%;
-  background:conic-gradient(var(--c) calc(var(--v)*3.6deg), var(--wh-grey-light) 0);
-  display:flex;align-items:center;justify-content:center;}
-.gauge span{width:74px;height:74px;background:var(--wh-white);border-radius:50%;
-  display:flex;align-items:center;justify-content:center;font-family:var(--wh-font-display);font-size:23px;}
-.ring .rlabel{font-size:13px;font-weight:600;line-height:1.25;max-width:120px;}
+.gauge{--v:0;--c:var(--wh-green);width:88px;height:88px;border-radius:50%;background:conic-gradient(var(--c) calc(var(--v)*3.6deg), var(--wh-grey-light) 0);display:flex;align-items:center;justify-content:center;}
+.gauge span{width:68px;height:68px;background:var(--wh-white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--wh-font-display);font-size:21px;}
+.ring .rlabel{font-size:12.5px;font-weight:600;line-height:1.25;max-width:120px;}
 
-/* cwv */
-.cwv{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:22px;}
+.cwv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:22px;}
 .cwv .metric{border:1px solid var(--wh-grey-light);border-radius:10px;padding:14px 16px;}
 .cwv .mname{font-size:11.5px;letter-spacing:.6px;text-transform:uppercase;color:var(--wh-grey-dim);font-weight:600;}
 .cwv .mval{font-family:var(--wh-font-display);font-size:22px;margin-top:4px;}
@@ -117,51 +93,64 @@ h3{font-size:18px;line-height:1.24;letter-spacing:.4px;}
 .tag-avg{background:#fff4d9;color:#8a6d00;}
 .tag-poor{background:#ffe6e7;color:var(--wh-red);}
 
-/* category cards */
-.section-title{margin:38px 0 14px;display:flex;align-items:baseline;gap:12px;}
-.cat{background:var(--wh-white);border:1px solid var(--wh-grey-light);border-radius:var(--wh-radius-card);
-  margin:0 0 14px;overflow:hidden;}
+.section-title{margin:38px 0 14px;}
+.cat{background:var(--wh-white);border:1px solid var(--wh-grey-light);border-radius:var(--wh-radius-card);margin:0 0 14px;overflow:hidden;}
 .cat-head{display:flex;align-items:center;gap:16px;padding:20px 24px;cursor:pointer;}
-.cat-head .cscore{flex:0 0 52px;width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;
-  font-family:var(--wh-font-display);font-size:19px;color:var(--wh-white);}
+.cat-head .cscore{flex:0 0 52px;width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:var(--wh-font-display);font-size:19px;color:var(--wh-white);}
 .cat-head .cinfo{flex:1;min-width:0;}
 .cat-head h3{margin:0 0 2px;}
 .cat-head .csub{font-size:13.5px;color:var(--wh-grey-dim);}
 .cat-head .chev{font-size:20px;color:var(--wh-grey-dim);transition:transform .18s ease;}
 .cat.open .chev{transform:rotate(180deg);}
-.cat-body{display:none;padding:0 24px 8px;}
+.cat-body{display:none;padding:4px 24px 8px;}
 .cat.open .cat-body{display:block;}
 
 .issue{border-top:1px solid var(--wh-grey-light);padding:16px 0;}
 .issue:first-child{border-top:none;}
-.issue .ihead{display:flex;align-items:center;gap:10px;}
+.issue .ihead{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
 .sev{font-size:10.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:3px 9px;border-radius:var(--wh-radius-pill);white-space:nowrap;}
 .sev-high{background:#ffe6e7;color:var(--wh-red);}
 .sev-medium{background:#fff4d9;color:#8a6d00;}
 .sev-info{background:#eef4ff;color:#1f5fb3;}
 .issue .ititle{font-weight:600;font-size:15px;}
 .issue .idesc{font-size:14px;color:var(--wh-grey-dim);margin:8px 0 0;}
-.fixlock{margin-top:12px;border:1px dashed #bdbdbd;border-radius:10px;padding:14px 16px;position:relative;background:#fafafa;}
+.issue .ifound{font-size:13px;color:var(--wh-black);margin:6px 0 0;}
+.issue .ifound b{font-family:var(--wh-font-display);font-weight:400;}
+.fixlock{margin-top:12px;border:1px dashed #bdbdbd;border-radius:10px;padding:14px 16px;background:#fafafa;}
 .fixlock .flabel{font-family:var(--wh-font-display);font-size:13px;letter-spacing:.4px;display:flex;align-items:center;gap:8px;}
 .fixlock .fblur{margin-top:8px;color:#7a7a7a;font-size:13.5px;filter:blur(4px);user-select:none;}
 .lockpill{font-size:11px;font-weight:700;background:var(--wh-yellow);color:var(--wh-black);border-radius:var(--wh-radius-pill);padding:3px 10px;}
 
-/* locked service cards */
+.passwrap{border-top:1px solid var(--wh-grey-light);margin-top:6px;padding-top:12px;}
+.passtoggle{font-size:13px;font-weight:600;color:var(--wh-green);cursor:pointer;user-select:none;}
+.passlist{list-style:none;margin:10px 0 6px;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:4px 18px;}
+.passlist li{font-size:13.5px;color:var(--wh-grey-dim);padding-left:22px;position:relative;}
+.passlist li::before{content:'\2713';position:absolute;left:0;color:var(--wh-green);font-weight:700;}
+
+.kwcard{background:var(--wh-white);border:1px solid var(--wh-grey-light);border-radius:var(--wh-radius-card);padding:22px 24px;margin:0 0 14px;}
+.kwcard h3{margin-bottom:6px;}
+.kwcard .ksub{font-size:13.5px;color:var(--wh-grey-dim);margin:0 0 14px;}
+.kwchips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+.kwchip{background:var(--wh-sky);color:#00224a;border-radius:var(--wh-radius-pill);padding:6px 14px;font-size:13.5px;font-weight:600;}
+.kwtable{position:relative;border:1px dashed #bdbdbd;border-radius:10px;overflow:hidden;}
+.kwtable table{width:100%;border-collapse:collapse;font-size:13.5px;filter:blur(5px);user-select:none;}
+.kwtable th,.kwtable td{text-align:left;padding:9px 14px;border-bottom:1px solid var(--wh-grey-light);}
+.kwtable th{font-family:var(--wh-font-display);font-size:11.5px;text-transform:uppercase;letter-spacing:.5px;}
+.kwlockover{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:rgba(255,255,255,.35);text-align:center;padding:16px;}
+.kwlockover .lk{font-family:var(--wh-font-display);font-size:15px;}
+
 .locked-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;}
-.locked-card{position:relative;background:var(--wh-white);border:1px solid var(--wh-grey-light);
-  border-radius:var(--wh-radius-card);padding:22px 24px;overflow:hidden;}
+.locked-card{background:var(--wh-white);border:1px solid var(--wh-grey-light);border-radius:var(--wh-radius-card);padding:22px 24px;}
 .locked-card h3{margin-bottom:8px;}
 .locked-card p{font-size:14px;color:var(--wh-grey-dim);margin:0;}
-.locked-card .lockbar{margin-top:14px;display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:var(--wh-black);}
+.locked-card .lockbar{margin-top:14px;display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;}
 .locked-card .lockbar .lockpill{background:var(--wh-black);color:var(--wh-yellow);}
 
-/* gate / CTA */
 .gate{background:var(--wh-black);color:var(--wh-white);border-radius:16px;padding:38px 34px;margin-top:40px;text-align:center;}
 .gate h2{color:var(--wh-white);}
 .gate p{color:#d7d7d7;max-width:560px;margin:6px auto 22px;}
 .gate .gform{display:flex;gap:10px;max-width:520px;margin:0 auto 14px;flex-wrap:wrap;justify-content:center;}
-.gate .gform input{flex:1;min-width:220px;border:2px solid #fff;background:#111;color:#fff;border-radius:var(--wh-radius-pill);
-  padding:14px 18px;font-family:var(--wh-font-body);font-size:15px;outline:none;}
+.gate .gform input{flex:1;min-width:220px;border:2px solid #fff;background:#111;color:#fff;border-radius:var(--wh-radius-pill);padding:14px 18px;font-family:var(--wh-font-body);font-size:15px;outline:none;}
 .gate .gform input::placeholder{color:#9a9a9a;}
 .gate .or{color:#9a9a9a;font-size:13px;margin:10px 0;}
 .gate .gnote{font-size:12px;color:#9a9a9a;margin-top:6px;}
@@ -171,7 +160,7 @@ h3{font-size:18px;line-height:1.24;letter-spacing:.4px;}
 
 @media(max-width:760px){
   h1{font-size:34px;}
-  .rings{grid-template-columns:repeat(2,1fr);}
+  .rings{grid-template-columns:repeat(3,1fr);}
   .nav{padding:14px 18px;}
   .main{padding:0 16px 70px;}
 }
@@ -192,13 +181,13 @@ h3{font-size:18px;line-height:1.24;letter-spacing:.4px;}
 
   <div class="kicker">Free SEO &amp; AI Search Audit</div>
   <h1>Is your website winning search &amp; AI?</h1>
-  <p class="lede">Run a free, instant audit. Get your real scores, Core Web Vitals, and a prioritized list of what's holding you back &mdash; in seconds.</p>
+  <p class="lede">Run a free, instant audit. Get your real scores, Core Web Vitals, on-page findings, and AI-readiness signals &mdash; in seconds.</p>
 
   <form class="auditbox" id="auditForm">
     <input id="urlInput" type="text" inputmode="url" placeholder="Enter your website URL (e.g. yourbusiness.com)" aria-label="Website URL" required>
     <button class="btn btn-dark" type="submit">Run free audit</button>
   </form>
-  <div class="form-hint">No signup to see your scores. Powered by real Google Lighthouse &amp; Core Web Vitals data.</div>
+  <div class="form-hint">No signup to see your scores. Real checks across Technical, On-Page, Performance &amp; AI search readiness.</div>
 </section>
 
 <main class="main">
@@ -206,18 +195,21 @@ h3{font-size:18px;line-height:1.24;letter-spacing:.4px;}
 </main>
 
 <footer class="footer">
-  Work Hero &middot; Free SEO &amp; AI Search Audit. Draft proposal &mdash; not affiliated with the live useworkhero.com site. Scores from Google PageSpeed Insights; a full manual audit covers areas this tool cannot assess automatically.
+  Work Hero &middot; Free SEO &amp; AI Search Audit. Draft proposal &mdash; not affiliated with the live useworkhero.com site. Automated checks via Google PageSpeed Insights &amp; on-page analysis; a full manual audit covers areas this tool cannot assess automatically.
 </footer>
 
 <script>
 /* ============================================================
-   CONFIG — plug in your three values here.
+   CONFIG — plug in your values here.
    ============================================================ */
 const CONFIG = {
-  // Free key from https://developers.google.com/speed/docs/insights/v5/get-started
-  // (Restrict it by HTTP referrer to your Pages domain + PageSpeed Insights API only.)
+  // Free key: https://developers.google.com/speed/docs/insights/v5/get-started
+  // Restrict by HTTP referrer to your Pages domain + PageSpeed Insights API only.
   PSI_API_KEY: '',
-  // Formspree form ID, e.g. 'xdorwabc'  ->  https://formspree.io/f/xdorwabc
+  // Your deployed Cloudflare Worker base URL, e.g. 'https://wh-audit.<you>.workers.dev'
+  // (See worker/README.md to deploy. Leave '' until deployed.)
+  WORKER_URL: '',
+  // Formspree form ID, e.g. 'xdorwabc' -> https://formspree.io/f/xdorwabc
   FORMSPREE_ID: '',
   // Your real Book-a-Call / Calendly URL
   BOOKING_URL: 'https://useworkhero.com/',
@@ -225,332 +217,320 @@ const CONFIG = {
   STRATEGY: 'mobile',
 };
 
-const $ = (s, r=document) => r.querySelector(s);
+const $ = (s,r=document)=>r.querySelector(s);
 const results = $('#results');
-
-/* wire booking links */
-document.querySelectorAll('[data-book]').forEach(a => a.setAttribute('href', CONFIG.BOOKING_URL));
+document.querySelectorAll('[data-book]').forEach(a=>a.setAttribute('href',CONFIG.BOOKING_URL));
 
 /* ---------- helpers ---------- */
 function normalizeUrl(v){
-  v = (v||'').trim();
-  if(!v) return '';
-  if(!/^https?:\/\//i.test(v)) v = 'https://' + v;
-  try { return new URL(v).href; } catch(e){ return ''; }
+  v=(v||'').trim(); if(!v) return '';
+  if(!/^https?:\/\//i.test(v)) v='https://'+v;
+  try{ return new URL(v).href; }catch(e){ return ''; }
 }
-function scoreColor(pct){
-  if(pct>=90) return 'var(--wh-green)';
-  if(pct>=50) return 'var(--wh-orange)';
-  return 'var(--wh-red)';
-}
-function sevOf(score){
-  if(score===null||score===undefined) return 'info';
-  if(score>=0.9) return 'info';
-  if(score>=0.5) return 'medium';
-  return 'high';
-}
+function scoreColor(pct){ if(pct==null) return 'var(--wh-grey-dim)'; if(pct>=90) return 'var(--wh-green)'; if(pct>=50) return 'var(--wh-orange)'; return 'var(--wh-red)'; }
 function esc(s){ return (s==null?'':String(s)).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function clean(s){ return (s||'').replace(/\s*\[[^\]]*\]\([^)]*\)/g,'').trim(); }
 
 /* ---------- loading ---------- */
-const LOAD_MSGS = [
-  'Fetching your page…',
-  'Running Google Lighthouse…',
-  'Checking Core Web Vitals…',
-  'Analyzing on-page SEO signals…',
-  'Assessing AI-search readiness…',
-  'Compiling your report…'
-];
-let loadTimer = null;
+const LOAD_MSGS=['Fetching your page…','Reading titles, meta & headings…','Checking robots, sitemap & schema…','Running Google Lighthouse…','Checking Core Web Vitals…','Assessing AI-search readiness…','Compiling your report…'];
+let loadTimer=null;
 function showLoading(url){
-  let i = 0;
-  results.innerHTML =
-    '<div class="loading"><div class="spinner"></div>'+
-    '<div class="lmsg" id="lmsg">'+esc(LOAD_MSGS[0])+'</div>'+
-    '<div class="lurl">'+esc(url)+'</div></div>';
-  loadTimer = setInterval(()=>{ i=(i+1)%LOAD_MSGS.length; const el=$('#lmsg'); if(el) el.textContent=LOAD_MSGS[i]; }, 1600);
+  let i=0;
+  results.innerHTML='<div class="loading"><div class="spinner"></div><div class="lmsg" id="lmsg">'+esc(LOAD_MSGS[0])+'</div><div class="lurl">'+esc(url)+'</div></div>';
+  loadTimer=setInterval(()=>{ i=(i+1)%LOAD_MSGS.length; const el=$('#lmsg'); if(el) el.textContent=LOAD_MSGS[i]; },1500);
 }
 function stopLoading(){ if(loadTimer){ clearInterval(loadTimer); loadTimer=null; } }
 
-/* ---------- PSI fetch ---------- */
-async function runAudit(url){
-  const p = new URLSearchParams();
-  p.set('url', url);
-  p.set('strategy', CONFIG.STRATEGY);
-  ['performance','seo','best-practices','accessibility'].forEach(c=>p.append('category', c));
-  if(CONFIG.PSI_API_KEY) p.set('key', CONFIG.PSI_API_KEY);
-  const endpoint = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed?' + p.toString();
-  const res = await fetch(endpoint);
-  const data = await res.json();
-  if(!res.ok || data.error){
-    const msg = (data.error && data.error.message) || ('Request failed ('+res.status+')');
-    throw new Error(msg);
-  }
-  return data;
+/* ---------- data sources ---------- */
+async function fetchPSI(url){
+  if(!CONFIG.PSI_API_KEY) return { ok:false, reason:'no-key' };
+  const p=new URLSearchParams();
+  p.set('url',url); p.set('strategy',CONFIG.STRATEGY);
+  ['performance','seo','best-practices','accessibility'].forEach(c=>p.append('category',c));
+  p.set('key',CONFIG.PSI_API_KEY);
+  try{
+    const r=await fetch('https://www.googleapis.com/pagespeedonline/v5/runPagespeed?'+p.toString());
+    const d=await r.json();
+    if(!r.ok||d.error) return { ok:false, reason:(d.error&&d.error.message)||('HTTP '+r.status) };
+    return { ok:true, data:d };
+  }catch(e){ return { ok:false, reason:e.message }; }
+}
+async function fetchWorker(url){
+  if(!CONFIG.WORKER_URL) return { ok:false, reason:'no-worker' };
+  try{
+    const r=await fetch(CONFIG.WORKER_URL.replace(/\/$/,'')+'/audit?url='+encodeURIComponent(url));
+    const d=await r.json();
+    if(!d.ok) return { ok:false, reason:d.error||'worker error' };
+    return { ok:true, data:d };
+  }catch(e){ return { ok:false, reason:e.message }; }
 }
 
-/* ---------- category model ---------- */
-const CATS = {
-  technical:   { name:'Technical SEO & Crawlability', sub:'Crawlability, indexing, HTTPS, structured data' },
-  performance: { name:'Site Performance & Core Web Vitals', sub:'Speed and stability that search & AI reward' },
-  onpage:      { name:'On-Page & Content Signals', sub:'Titles, meta, headings, links, images' },
-  ai:          { name:'AI Search Readiness (AIO / GEO)', sub:'How parseable & quotable your page is to AI' },
+/* ---------- checks from HTML (Worker) ---------- */
+const CATS={
+  technical:{name:'Technical SEO & Crawlability',sub:'Crawlability, indexing, HTTPS, structured data'},
+  onpage:{name:'On-Page & Content Signals',sub:'Titles, meta, headings, links, images'},
+  ai:{name:'AI Search Readiness (AIO / GEO)',sub:'How parseable & quotable your page is to AI'},
+  performance:{name:'Site Performance & Core Web Vitals',sub:'Speed & stability that search & AI reward'},
 };
-const A11Y_KEEP = ['image-alt','document-title','html-has-lang','heading-order','link-name','meta-viewport'];
-const AI_SIGNALS = [
-  {id:'document-title',   label:'Clear, unique page title'},
-  {id:'meta-description', label:'Meta description present'},
-  {id:'html-has-lang',    label:'Language declared for parsers'},
-  {id:'heading-order',    label:'Logical heading hierarchy'},
-  {id:'is-crawlable',     label:'Page is crawlable by bots'},
-  {id:'crawlable-anchors',label:'Links are machine-followable'},
-];
-
-function collectIssues(data){
-  const lh = data.lighthouseResult;
-  const cats = lh.categories || {};
-  const audits = lh.audits || {};
-  const buckets = { technical:[], performance:[], onpage:[], ai:[] };
-
-  function pushFrom(catKey, bucketDecider){
-    const cat = cats[catKey];
-    if(!cat || !cat.auditRefs) return;
-    cat.auditRefs.forEach(ref=>{
-      const a = audits[ref.id];
-      if(!a) return;
-      if(a.scoreDisplayMode==='notApplicable' || a.scoreDisplayMode==='manual') return;
-      if(a.score===null || a.score>=0.9) return; // only real problems
-      const bucket = bucketDecider(ref, a);
-      if(!bucket) return;
-      buckets[bucket].push({
-        title: a.title,
-        desc: (a.description||'').replace(/\s*\[[^\]]*\]\([^)]*\)/g,'').trim(),
-        sev: sevOf(a.score)
-      });
-    });
-  }
-
-  pushFrom('performance', ()=> 'performance');
-  pushFrom('best-practices', ()=> 'technical');
-  pushFrom('seo', (ref)=> ref.group==='seo-content' ? 'onpage' : 'technical');
-  pushFrom('accessibility', (ref)=> A11Y_KEEP.includes(ref.id) ? 'onpage' : null);
-
-  // AI readiness signals -> issues for anything failing
-  const aiSignalResults = AI_SIGNALS.map(sig=>{
-    const a = audits[sig.id];
-    const pass = a && (a.score===null || a.score>=0.9);
-    if(a && a.score!==null && a.score<0.9){
-      buckets.ai.push({ title: sig.label + ' — needs work', desc:(a.description||'').replace(/\s*\[[^\]]*\]\([^)]*\)/g,'').trim(), sev: sevOf(a.score) });
-    }
-    return { label: sig.label, pass: !!pass };
-  });
-
-  // scores (0-100)
-  const s = k => cats[k] && cats[k].score!=null ? Math.round(cats[k].score*100) : null;
-  const aiScore = Math.round(aiSignalResults.filter(r=>r.pass).length / aiSignalResults.length * 100);
-  const scores = {
-    seo: s('seo'),
-    performance: s('performance'),
-    ai: aiScore,
-  };
-  const parts = [scores.seo, scores.performance, s('best-practices'), scores.ai].filter(v=>v!=null);
-  scores.overall = parts.length ? Math.round(parts.reduce((a,b)=>a+b,0)/parts.length) : null;
-
-  // per-category display score
-  const catScore = {
-    technical: s('best-practices')!=null && scores.seo!=null ? Math.round((s('best-practices')+scores.seo)/2) : (scores.seo ?? s('best-practices')),
-    performance: scores.performance,
-    onpage: scores.seo,
-    ai: scores.ai,
-  };
-
-  return { buckets, scores, catScore, aiSignalResults, audits, data };
+function newModel(){
+  const f={technical:[],onpage:[],ai:[],performance:[]};
+  const pass={technical:[],onpage:[],ai:[],performance:[]};
+  return {f,pass,keywords:[],cwv:null,notes:[]};
+}
+function add(m,cat,ok,sev,title,detail,found){
+  if(ok){ m.pass[cat].push(title); }
+  else{ m.f[cat].push({title,detail,found,sev}); }
 }
 
-/* ---------- CWV ---------- */
-function cwvHtml(data){
-  const audits = data.lighthouseResult.audits || {};
-  const le = (data.loadingExperience && data.loadingExperience.metrics) || {};
-  const rows = [];
-  function fieldTag(cat){ return cat==='FAST'?'tag-good':cat==='AVERAGE'?'tag-avg':cat==='SLOW'?'tag-poor':''; }
-  function fieldLabel(cat){ return cat==='FAST'?'Good':cat==='AVERAGE'?'Needs work':cat==='SLOW'?'Poor':''; }
+function collectLDTypes(node,acc){
+  if(!node||typeof node!=='object') return;
+  if(Array.isArray(node)){ node.forEach(n=>collectLDTypes(n,acc)); return; }
+  const t=node['@type'];
+  if(t){ (Array.isArray(t)?t:[t]).forEach(x=>acc.types.add(String(x))); }
+  if(node.sameAs) acc.sameAs=true;
+  if(node['@graph']) collectLDTypes(node['@graph'],acc);
+  Object.keys(node).forEach(k=>{ if(typeof node[k]==='object') collectLDTypes(node[k],acc); });
+}
 
-  function addField(key, name, fmt){
-    const m = le[key];
-    if(!m) return false;
-    rows.push({name, val: fmt(m.percentile), tag: fieldTag(m.category), tagLabel: fieldLabel(m.category)});
-    return true;
-  }
-  let any = false;
-  any = addField('LARGEST_CONTENTFUL_PAINT_MS','LCP', v=>(v/1000).toFixed(1)+'s') || any;
-  any = addField('INTERACTION_TO_NEXT_PAINT','INP', v=>Math.round(v)+'ms') || any;
-  any = addField('CUMULATIVE_LAYOUT_SHIFT_SCORE','CLS', v=>(v/100).toFixed(2)) || any;
-  any = addField('FIRST_CONTENTFUL_PAINT_MS','FCP', v=>(v/1000).toFixed(1)+'s') || any;
+function runHtmlChecks(m,w){
+  const html=w.html||'';
+  const doc=new DOMParser().parseFromString(html,'text/html');
+  const finalUrl=w.finalUrl||w.input||'';
+  let host=''; try{ host=new URL(finalUrl).host; }catch(e){}
+  const isHttps=/^https:/i.test(finalUrl);
 
-  // fall back to lab metrics if no field data
-  if(!any){
-    [['largest-contentful-paint','LCP'],['cumulative-layout-shift','CLS'],['total-blocking-time','TBT'],['first-contentful-paint','FCP']].forEach(([id,name])=>{
-      const a = audits[id];
-      if(a && a.displayValue){
-        const tag = a.score>=0.9?'tag-good':a.score>=0.5?'tag-avg':'tag-poor';
-        const tagLabel = a.score>=0.9?'Good':a.score>=0.5?'Needs work':'Poor';
-        rows.push({name:name+' (lab)', val:a.displayValue, tag, tagLabel});
-      }
+  const title=(doc.querySelector('title')?.textContent||'').trim();
+  const metaDesc=(doc.querySelector('meta[name="description" i]')?.getAttribute('content')||'').trim();
+  const h1s=doc.querySelectorAll('h1');
+  const headings=doc.querySelectorAll('h1,h2,h3,h4,h5,h6');
+  const canonical=doc.querySelector('link[rel="canonical" i]')?.getAttribute('href')||'';
+  const robotsMeta=(doc.querySelector('meta[name="robots" i]')?.getAttribute('content')||'').toLowerCase();
+  const viewport=doc.querySelector('meta[name="viewport" i]');
+  const lang=(doc.documentElement.getAttribute('lang')||'').trim();
+  const ogT=doc.querySelector('meta[property="og:title" i]'), ogD=doc.querySelector('meta[property="og:description" i]'), ogI=doc.querySelector('meta[property="og:image" i]');
+  const tw=doc.querySelector('meta[name^="twitter:" i]');
+  const imgs=doc.querySelectorAll('img'); let alts=0; imgs.forEach(im=>{ if((im.getAttribute('alt')||'').trim()) alts++; });
+  const ld={types:new Set(),sameAs:false};
+  doc.querySelectorAll('script[type="application/ld+json" i]').forEach(n=>{ try{ collectLDTypes(JSON.parse(n.textContent),ld); }catch(e){} });
+  let internal=0,external=0;
+  doc.querySelectorAll('a[href]').forEach(a=>{ try{ const u=new URL(a.getAttribute('href'),finalUrl); if(u.host===host) internal++; else if(/^https?:$/.test(u.protocol)) external++; }catch(e){} });
+  const bodyText=(doc.body?doc.body.textContent:'').replace(/\s+/g,' ').trim();
+  const words=bodyText?bodyText.split(' ').length:0;
+  const mixed=isHttps?((html.match(/\ssrc=["']http:\/\/[^"']/gi)||[]).length+(html.match(/<link\b[^>]*\bhref=["']http:\/\/[^"']/gi)||[]).length):0;
+  const xRobots=(w.headers&&w.headers['x-robots-tag']||'').toLowerCase();
+
+  /* ---- On-Page ---- */
+  add(m,'onpage', title.length>=15&&title.length<=65, title.length? 'medium':'high',
+    'Title tag length', 'Aim for ~15–65 characters so it isn\'t truncated in results.', title? ('“'+title+'” — '+title.length+' chars') : 'No <title> found');
+  add(m,'onpage', metaDesc.length>=70&&metaDesc.length<=165, metaDesc.length?'medium':'high',
+    'Meta description', 'A 70–165 char description improves click-through from search & AI snippets.', metaDesc? (metaDesc.length+' chars') : 'Missing meta description');
+  add(m,'onpage', h1s.length===1, h1s.length===0?'high':'medium',
+    'Single, clear H1', 'Each page should have exactly one H1 that states the topic.', h1s.length+' H1 tag(s) found');
+  add(m,'onpage', headings.length>=3, 'medium',
+    'Heading structure', 'A logical H1–H3 outline helps both readers and AI parse the page.', headings.length+' headings found');
+  add(m,'onpage', imgs.length===0 || alts/imgs.length>=0.8, 'medium',
+    'Image alt text', 'Descriptive alt text aids accessibility and image search.', imgs.length? (alts+'/'+imgs.length+' images have alt text') : 'No images');
+  add(m,'onpage', !!(ogT&&ogD&&ogI), 'medium',
+    'Open Graph tags', 'og:title/description/image control how links look when shared and cited.', (ogT?'title ':'')+(ogD?'desc ':'')+(ogI?'image':'')||'None found');
+  add(m,'onpage', !!tw, 'info',
+    'Twitter/X card', 'Twitter card tags improve social preview appearance.', tw?'Present':'Not found');
+  add(m,'onpage', words>=300, words<120?'high':'medium',
+    'Content depth', 'Very thin pages struggle to rank or be cited. ~300+ words is a rough floor.', '~'+words+' words of visible text');
+
+  /* ---- Technical ---- */
+  add(m,'technical', isHttps, 'high', 'HTTPS secure', 'Search & browsers require secure HTTPS.', isHttps?'Served over HTTPS':'Not HTTPS');
+  add(m,'technical', mixed===0, 'medium', 'No mixed content', 'HTTP resources on an HTTPS page trigger warnings.', mixed?(mixed+' insecure http:// reference(s)'):'None detected');
+  add(m,'technical', !(robotsMeta.includes('noindex')||xRobots.includes('noindex')), 'high', 'Page is indexable', 'A stray noindex hides the page from search entirely.', (robotsMeta.includes('noindex')||xRobots.includes('noindex'))?'noindex present!':'No noindex');
+  add(m,'technical', !!(w.robots&&w.robots.exists), 'medium', 'robots.txt present', 'robots.txt guides crawlers to the right pages.', (w.robots&&w.robots.exists)?'Found':'Missing');
+  add(m,'technical', !!(w.sitemap&&w.sitemap.exists), 'medium', 'XML sitemap present', 'A sitemap helps search engines discover all pages.', (w.sitemap&&w.sitemap.exists)?'Found':'Not found at common paths');
+  add(m,'technical', !!canonical, 'medium', 'Canonical tag', 'Canonicals prevent duplicate-content dilution.', canonical?('→ '+canonical):'No canonical tag');
+  add(m,'technical', !!viewport, 'high', 'Mobile viewport', 'A viewport meta is required for mobile rendering.', viewport?'Configured':'Missing');
+  add(m,'technical', ld.types.size>0, 'medium', 'Structured data (schema)', 'Schema markup powers rich results & AI understanding.', ld.types.size?('Types: '+[...ld.types].slice(0,6).join(', ')):'No JSON-LD schema found');
+
+  /* ---- AI readiness ---- */
+  add(m,'ai', ld.types.has('Organization')||ld.types.has('LocalBusiness')||ld.types.has('WebSite'), 'medium',
+    'Entity / Organization schema', 'Defines your brand as an entity AI systems can trust & cite.', (ld.types.has('Organization')||ld.types.has('LocalBusiness')||ld.types.has('WebSite'))?'Present':'Not found');
+  add(m,'ai', ld.types.has('FAQPage')||ld.types.has('QAPage'), 'medium',
+    'FAQ / Q&A schema', 'Q&A structure is prime material for AI Overviews & assistants.', (ld.types.has('FAQPage')||ld.types.has('QAPage'))?'Present':'Not found');
+  add(m,'ai', !!(w.llms&&w.llms.exists), 'info',
+    'llms.txt file', 'An emerging standard telling AI crawlers how to use your content.', (w.llms&&w.llms.exists)?'Found':'Not found');
+  add(m,'ai', ld.sameAs, 'info',
+    'Entity sameAs links', 'sameAs links (socials, Wikidata) strengthen entity recognition.', ld.sameAs?'Present':'Not found');
+  add(m,'ai', metaDesc.length>=70, 'medium',
+    'Answerable summary', 'A concise summary up top helps models extract a direct answer.', metaDesc.length?'Meta description present':'No summary meta');
+  add(m,'ai', headings.length>=3&&h1s.length===1, 'medium',
+    'Machine-readable structure', 'Clean heading hierarchy lets AI segment and quote your content.', (h1s.length===1?'1 H1':h1s.length+' H1s')+', '+headings.length+' headings');
+
+  /* ---- keyword candidates (free, from the page) ---- */
+  const kws=new Set();
+  const metaKw=(doc.querySelector('meta[name="keywords" i]')?.getAttribute('content')||'');
+  metaKw.split(',').map(s=>s.trim()).filter(Boolean).slice(0,5).forEach(k=>kws.add(k));
+  if(h1s[0]) kws.add(h1s[0].textContent.trim().slice(0,60));
+  if(ogT&&ogT.getAttribute('content')) kws.add(ogT.getAttribute('content').trim().slice(0,60));
+  if(title) kws.add(title.split(/[|\-–—:]/)[0].trim().slice(0,60));
+  m.keywords=[...kws].filter(Boolean).slice(0,6);
+}
+
+/* ---------- performance from PSI ---------- */
+function runPSI(m,data){
+  const lh=data.lighthouseResult||{}; const cats=lh.categories||{}; const audits=lh.audits||{};
+  const perf=cats.performance;
+  if(perf&&perf.auditRefs){
+    perf.auditRefs.forEach(ref=>{
+      const a=audits[ref.id]; if(!a) return;
+      if(a.scoreDisplayMode==='notApplicable'||a.scoreDisplayMode==='manual'||a.scoreDisplayMode==='informative') return;
+      if(a.score===null||a.score>=0.9) return;
+      add(m,'performance',false, a.score<0.5?'high':'medium', a.title, clean(a.description), a.displayValue||'');
     });
   }
-  if(!rows.length) return '';
-  return '<div class="cwv">'+rows.map(r=>
-    '<div class="metric"><div class="mname">'+esc(r.name)+'</div><div class="mval">'+esc(r.val)+'</div>'+
-    (r.tag?'<span class="mtag '+r.tag+'">'+esc(r.tagLabel)+'</span>':'')+'</div>'
-  ).join('')+'</div>';
+  // CWV
+  const le=(data.loadingExperience&&data.loadingExperience.metrics)||{};
+  const rows=[]; const tag=c=>c==='FAST'?['tag-good','Good']:c==='AVERAGE'?['tag-avg','Needs work']:c==='SLOW'?['tag-poor','Poor']:['',''];
+  function f(k,name,fmt){ const mm=le[k]; if(!mm) return; const [cls,lbl]=tag(mm.category); rows.push({name,val:fmt(mm.percentile),cls,lbl}); }
+  f('LARGEST_CONTENTFUL_PAINT_MS','LCP',v=>(v/1000).toFixed(1)+'s');
+  f('INTERACTION_TO_NEXT_PAINT','INP',v=>Math.round(v)+'ms');
+  f('CUMULATIVE_LAYOUT_SHIFT_SCORE','CLS',v=>(v/100).toFixed(2));
+  f('FIRST_CONTENTFUL_PAINT_MS','FCP',v=>(v/1000).toFixed(1)+'s');
+  if(!rows.length){
+    [['largest-contentful-paint','LCP'],['cumulative-layout-shift','CLS'],['total-blocking-time','TBT'],['first-contentful-paint','FCP']].forEach(([id,name])=>{
+      const a=audits[id]; if(a&&a.displayValue){ const cls=a.score>=0.9?'tag-good':a.score>=0.5?'tag-avg':'tag-poor'; const lbl=a.score>=0.9?'Good':a.score>=0.5?'Needs work':'Poor'; rows.push({name:name+' (lab)',val:a.displayValue,cls,lbl}); }
+    });
+  }
+  m.cwv=rows;
+  return perf&&perf.score!=null?Math.round(perf.score*100):null;
+}
+
+/* ---------- scoring ---------- */
+function catScore(m,cat){
+  const passed=m.pass[cat].length, failed=m.f[cat].length, total=passed+failed;
+  if(!total) return null;
+  return Math.round(passed/total*100);
 }
 
 /* ---------- render ---------- */
-const FIX_BLUR = 'Rewrite the element to the exact spec our audit prescribes, apply the correct structured-data pattern, and re-test against the target metric until it passes.';
-
+const FIX_BLUR='Rewrite the element to the exact spec our audit prescribes, apply the correct structured-data pattern, and re-test against the target metric until it passes.';
 function issueHtml(it){
-  return '<div class="issue"><div class="ihead"><span class="sev sev-'+it.sev+'">'+
-    (it.sev==='high'?'High':it.sev==='medium'?'Medium':'Info')+'</span>'+
+  return '<div class="issue"><div class="ihead"><span class="sev sev-'+it.sev+'">'+(it.sev==='high'?'High':it.sev==='medium'?'Medium':'Info')+'</span>'+
     '<span class="ititle">'+esc(it.title)+'</span></div>'+
-    (it.desc?'<p class="idesc">'+esc(it.desc)+'</p>':'')+
-    '<div class="fixlock"><div class="flabel">🔒 How Work Hero fixes this <span class="lockpill">Locked</span></div>'+
-    '<div class="fblur">'+esc(FIX_BLUR)+'</div></div></div>';
+    (it.found?'<p class="ifound"><b>Found:</b> '+esc(it.found)+'</p>':'')+
+    (it.detail?'<p class="idesc">'+esc(it.detail)+'</p>':'')+
+    '<div class="fixlock"><div class="flabel">🔒 How Work Hero fixes this <span class="lockpill">Locked</span></div><div class="fblur">'+esc(FIX_BLUR)+'</div></div></div>';
 }
-
-function catHtml(key, issues, score){
-  const col = score==null ? 'var(--wh-grey-dim)' : scoreColor(score);
-  const n = issues.length;
-  const sub = n===0 ? 'No issues detected in this area 🎉' : n+' issue'+(n>1?'s':'')+' found — expand to view';
-  const open = n>0 ? '' : '';
-  return '<div class="cat'+(n>0?' open':'')+'">'+
-    '<div class="cat-head" data-toggle><div class="cscore" style="background:'+col+'">'+(score==null?'—':score)+'</div>'+
+function catHtml(m,key){
+  const issues=m.f[key]; const passed=m.pass[key]; const score=catScore(m,key);
+  const n=issues.length;
+  const order={high:0,medium:1,info:2};
+  issues.sort((a,b)=>order[a.sev]-order[b.sev]);
+  const sub=key==='performance'&&score==null?'Add your PageSpeed key to enable':(n===0?'All '+passed.length+' checks passed 🎉':n+' issue'+(n>1?'s':'')+' · '+passed.length+' passed');
+  const passBlock=passed.length?'<div class="passwrap"><span class="passtoggle" data-pass>▸ Show '+passed.length+' passed check'+(passed.length>1?'s':'')+'</span><ul class="passlist hidden">'+passed.map(p=>'<li>'+esc(p)+'</li>').join('')+'</ul></div>':'';
+  const body=(n?issues.map(issueHtml).join(''):'<div class="issue"><p class="idesc">Nothing flagged here by the automated scan. Our full manual audit still reviews this area in depth.</p></div>')+passBlock;
+  return '<div class="cat'+(n>0?' open':'')+'"><div class="cat-head" data-toggle>'+
+    '<div class="cscore" style="background:'+scoreColor(score)+'">'+(score==null?'—':score)+'</div>'+
     '<div class="cinfo"><h3>'+esc(CATS[key].name)+'</h3><div class="csub">'+esc(sub)+'</div></div>'+
-    '<div class="chev">▾</div></div>'+
-    '<div class="cat-body">'+(n?issues.map(issueHtml).join(''):'<div class="issue"><p class="idesc">Nothing flagged here by the automated scan. Our full manual audit still reviews this area in depth.</p></div>')+'</div></div>';
+    '<div class="chev">▾</div></div><div class="cat-body">'+body+'</div></div>';
+}
+function cwvHtml(m){
+  if(!m.cwv||!m.cwv.length) return '';
+  return '<div class="cwv">'+m.cwv.map(r=>'<div class="metric"><div class="mname">'+esc(r.name)+'</div><div class="mval">'+esc(r.val)+'</div>'+(r.cls?'<span class="mtag '+r.cls+'">'+esc(r.lbl)+'</span>':'')+'</div>').join('')+'</div>';
+}
+function keywordHtml(m){
+  if(!m.keywords.length) return '';
+  const chips=m.keywords.map(k=>'<span class="kwchip">'+esc(k)+'</span>').join('');
+  const vol=[2400,1300,880,590,320], diff=[52,38,61,44,29], rank=['#8','#14','—','#22','#6'], opp=['High','Medium','High','Medium','High'];
+  const rows=m.keywords.slice(0,5).map((k,i)=>'<tr><td>'+esc(k)+'</td><td>'+vol[i%5]+'</td><td>'+diff[i%5]+'</td><td>'+rank[i%5]+'</td><td>'+opp[i%5]+'</td></tr>').join('');
+  return '<div class="section-title"><h2>Keyword &amp; competitor opportunities</h2></div>'+
+   '<div class="kwcard"><h3>Your apparent target terms</h3>'+
+   '<p class="ksub">Pulled from your titles, headings &amp; metadata. These are what your homepage currently signals to search &amp; AI.</p>'+
+   '<div class="kwchips">'+chips+'</div>'+
+   '<div class="kwtable"><table><thead><tr><th>Keyword</th><th>Volume</th><th>Difficulty</th><th>Your rank</th><th>Opportunity</th></tr></thead><tbody>'+rows+'</tbody></table>'+
+   '<div class="kwlockover"><span class="lockpill">🔒 Locked</span><span class="lk">Unlock search volume, difficulty, your live rankings &amp; competitor gaps</span></div></div></div>';
+}
+const LOCKED_SERVICES=[
+  {name:'Local SEO & Listings',desc:'Google Business Profile, service-area pages, local schema and citations — assessed manually in your full audit.'},
+  {name:'Conversion (CRO)',desc:'Where visitors drop off, plus CTA, form, and trust-signal fixes that turn traffic into booked work.'},
+  {name:'Content & Keyword Strategy',desc:'Full keyword & intent mapping, competitor gaps, and content briefs your writers can execute.'},
+];
+function gateHtml(){
+  return '<div class="gate" id="gate"><h2>Want the fixes, not just the findings?</h2>'+
+   '<p>Your free scan shows <b>what</b> to fix. Get the full report with the exact <b>how</b> — plus your keyword data, Local, and CRO analysis — from the Work Hero team.</p>'+
+   '<form class="gform" id="leadForm"><input type="email" id="leadEmail" placeholder="you@company.com" required aria-label="Email"><button class="btn btn-yellow" type="submit">Email me the full report</button></form>'+
+   '<div class="or">— or —</div><a class="btn btn-dark" href="'+esc(CONFIG.BOOKING_URL)+'" data-book>Book a free strategy call</a>'+
+   '<div class="gnote">We\'ll send your full audit and a prioritized fix plan. No spam.</div></div>';
 }
 
-const LOCKED_SERVICES = [
-  { name:'Local SEO & Listings', desc:'Google Business Profile, service-area pages, local schema and citations — assessed manually in your full audit.' },
-  { name:'Conversion (CRO)', desc:'Where visitors drop off, plus CTA, form, and trust-signal fixes that turn traffic into booked work.' },
-  { name:'Content & Keyword Strategy', desc:'Keyword and intent mapping, competitor gaps, and content briefs your writers can execute.' },
-];
+function render(m,url,srcNote){
+  const scores={
+    overall:null, technical:catScore(m,'technical'), onpage:catScore(m,'onpage'), ai:catScore(m,'ai'), performance:catScore(m,'performance')
+  };
+  const parts=[scores.technical,scores.onpage,scores.ai,scores.performance].filter(v=>v!=null);
+  scores.overall=parts.length?Math.round(parts.reduce((a,b)=>a+b,0)/parts.length):null;
+  const totalIssues=['technical','onpage','ai','performance'].reduce((a,k)=>a+m.f[k].length,0);
 
-function render(model, url){
-  const { buckets, scores, catScore } = model;
-  const totalIssues = Object.values(buckets).reduce((a,b)=>a+b.length,0);
+  const rings=[['Overall',scores.overall],['Technical',scores.technical],['On-Page',scores.onpage],['AI Ready',scores.ai],['Perf',scores.performance]]
+    .map(([label,val])=>'<div class="ring"><div class="gauge" style="--v:'+(val||0)+';--c:'+scoreColor(val)+'"><span>'+(val==null?'—':val)+'</span></div><div class="rlabel">'+esc(label)+'</div></div>').join('');
 
-  const rings = [
-    ['Overall Health', scores.overall],
-    ['SEO', scores.seo],
-    ['Performance', scores.performance],
-    ['AI Readiness', scores.ai],
-  ].map(([label,val])=>{
-    const col = val==null?'var(--wh-grey-dim)':scoreColor(val);
-    return '<div class="ring"><div class="gauge" style="--v:'+(val||0)+';--c:'+col+'"><span>'+(val==null?'—':val)+'</span></div>'+
-      '<div class="rlabel">'+esc(label)+'</div></div>';
-  }).join('');
-
-  const html =
-    '<div class="scorehead">'+
-      '<div class="target">Audit for <b>'+esc(url)+'</b> · '+esc(CONFIG.STRATEGY)+' · '+totalIssues+' issues detected</div>'+
-      '<div class="rings">'+rings+'</div>'+
-      cwvHtml(model.data)+
-    '</div>'+
-
+  results.innerHTML=
+    '<div class="scorehead"><div class="target">Audit for <b>'+esc(url)+'</b> · '+esc(CONFIG.STRATEGY)+' · '+totalIssues+' issues detected</div>'+
+      '<div class="rings">'+rings+'</div>'+cwvHtml(m)+
+      (srcNote?'<div class="notice">'+srcNote+'</div>':'')+'</div>'+
     '<div class="section-title"><h2>Your prioritized findings</h2></div>'+
-    catHtml('technical', buckets.technical, catScore.technical)+
-    catHtml('performance', buckets.performance, catScore.performance)+
-    catHtml('onpage', buckets.onpage, catScore.onpage)+
-    catHtml('ai', buckets.ai, catScore.ai)+
-
+    catHtml(m,'technical')+catHtml(m,'onpage')+catHtml(m,'ai')+catHtml(m,'performance')+
+    keywordHtml(m)+
     '<div class="section-title"><h2>Also included in your full Work Hero audit</h2></div>'+
-    '<div class="locked-grid">'+LOCKED_SERVICES.map(s=>
-      '<div class="locked-card"><h3>'+esc(s.name)+'</h3><p>'+esc(s.desc)+'</p>'+
-      '<div class="lockbar"><span class="lockpill">🔒 Full audit</span> Assessed by our team</div></div>'
-    ).join('')+'</div>'+
-
-    gateHtml(url);
-
-  results.innerHTML = html;
+    '<div class="locked-grid">'+LOCKED_SERVICES.map(s=>'<div class="locked-card"><h3>'+esc(s.name)+'</h3><p>'+esc(s.desc)+'</p><div class="lockbar"><span class="lockpill">🔒 Full audit</span> Assessed by our team</div></div>').join('')+'</div>'+
+    gateHtml();
   wireResults();
 }
 
-function gateHtml(url){
-  return '<div class="gate" id="gate">'+
-    '<h2>Want the fixes, not just the findings?</h2>'+
-    '<p>Your free scan shows <b>what</b> to fix. Get the full report with the exact <b>how</b> — plus your Local, CRO, and content strategy — from the Work Hero team.</p>'+
-    '<form class="gform" id="leadForm">'+
-      '<input type="email" id="leadEmail" placeholder="you@company.com" required aria-label="Email">'+
-      '<button class="btn btn-yellow" type="submit">Email me the full report</button>'+
-    '</form>'+
-    '<div class="or">— or —</div>'+
-    '<a class="btn btn-dark" href="'+esc(CONFIG.BOOKING_URL)+'" data-book>Book a free strategy call</a>'+
-    '<div class="gnote">We\'ll send your full audit and a prioritized fix plan. No spam.</div>'+
-  '</div>';
-}
-
-/* ---------- interactivity on results ---------- */
 function wireResults(){
-  results.querySelectorAll('[data-toggle]').forEach(h=>{
-    h.addEventListener('click',()=> h.parentElement.classList.toggle('open'));
+  results.querySelectorAll('[data-toggle]').forEach(h=>h.addEventListener('click',()=>h.parentElement.classList.toggle('open')));
+  results.querySelectorAll('[data-pass]').forEach(t=>t.addEventListener('click',()=>{ const ul=t.nextElementSibling; ul.classList.toggle('hidden'); t.textContent=(ul.classList.contains('hidden')?'▸ Show ':'▾ Hide ')+t.textContent.replace(/^[▸▾] (Show|Hide) /,''); }));
+  const lead=$('#leadForm');
+  if(lead) lead.addEventListener('submit',async e=>{
+    e.preventDefault();
+    const email=$('#leadEmail').value.trim();
+    if(!CONFIG.FORMSPREE_ID){ gateMsg('Thanks! (Form not connected yet — add your Formspree ID in CONFIG to collect these.) Meanwhile, book a call below.'); return; }
+    try{
+      const r=await fetch('https://formspree.io/f/'+CONFIG.FORMSPREE_ID,{method:'POST',headers:{'Accept':'application/json'},body:new URLSearchParams({email,website:window.__lastAuditUrl||'',source:'Free SEO Audit tool'})});
+      gateMsg(r.ok?('✅ Thanks! Your full audit is on its way to '+email+'.'):'That didn\'t go through — please book a call below.');
+    }catch(err){ gateMsg('Network hiccup — please book a call below instead.'); }
   });
-  const lead = $('#leadForm');
-  if(lead){
-    lead.addEventListener('submit', async e=>{
-      e.preventDefault();
-      const email = $('#leadEmail').value.trim();
-      const targetUrl = (window.__lastAuditUrl||'');
-      if(!CONFIG.FORMSPREE_ID){
-        showGateMsg('Thanks! (Form not connected yet — add your Formspree ID in CONFIG to start collecting these.) Meanwhile, book a call below.');
-        return;
-      }
-      try{
-        const r = await fetch('https://formspree.io/f/'+CONFIG.FORMSPREE_ID, {
-          method:'POST', headers:{'Accept':'application/json'},
-          body: new URLSearchParams({ email, website: targetUrl, source:'Free SEO Audit tool' })
-        });
-        if(r.ok) showGateMsg('✅ Thanks! Your full audit is on its way to '+email+'.');
-        else showGateMsg('Hmm, that didn\'t go through. Please book a call below and we\'ll sort it out.');
-      }catch(err){ showGateMsg('Network hiccup — please book a call below instead.'); }
-    });
-  }
 }
-function showGateMsg(msg){
-  const gate = $('#gate');
-  if(!gate) return;
-  const form = $('#leadForm'); if(form) form.classList.add('hidden');
-  const existing = gate.querySelector('.gsuccess'); if(existing) existing.remove();
-  const div = document.createElement('div');
-  div.className='gsuccess'; div.textContent=msg;
-  gate.insertBefore(div, gate.querySelector('.or'));
-}
+function gateMsg(msg){ const g=$('#gate'); if(!g) return; const f=$('#leadForm'); if(f) f.classList.add('hidden'); const d=document.createElement('div'); d.className='gsuccess'; d.textContent=msg; g.insertBefore(d,g.querySelector('.or')); }
 
-/* ---------- error ---------- */
-function showError(url, err){
-  results.innerHTML = '<div class="errbox"><h3>We couldn\'t complete the audit</h3>'+
-    '<p><strong>'+esc(err.message||'Unknown error')+'</strong></p>'+
-    '<p>Check that the URL is public and reachable (e.g. <b>https://yourbusiness.com</b>), then try again. '+
-    'Very new or blocked sites can also fail the automated crawl.</p>'+
-    '<a class="btn btn-dark" href="'+esc(CONFIG.BOOKING_URL)+'" data-book style="margin-top:8px">Get a manual audit instead</a></div>';
-  results.querySelectorAll('[data-book]').forEach(a=>a.setAttribute('href',CONFIG.BOOKING_URL));
+function showError(url,msg){
+  results.innerHTML='<div class="errbox"><h3>We couldn\'t complete the audit</h3><p><strong>'+esc(msg)+'</strong></p>'+
+    '<p>Check the URL is public and reachable (e.g. <b>https://yourbusiness.com</b>), then try again.</p>'+
+    '<a class="btn btn-dark" href="'+esc(CONFIG.BOOKING_URL)+'" style="margin-top:8px">Get a manual audit instead</a></div>';
 }
 
 /* ---------- submit ---------- */
-$('#auditForm').addEventListener('submit', async e=>{
+$('#auditForm').addEventListener('submit',async e=>{
   e.preventDefault();
-  const url = normalizeUrl($('#urlInput').value);
+  const url=normalizeUrl($('#urlInput').value);
   if(!url){ alert('Please enter a valid website URL.'); return; }
-  window.__lastAuditUrl = url;
+  window.__lastAuditUrl=url;
   showLoading(url);
-  results.scrollIntoView({behavior:'smooth', block:'start'});
-  try{
-    const data = await runAudit(url);
-    stopLoading();
-    const model = collectIssues(data);
-    render(model, url);
-  }catch(err){
-    stopLoading();
-    showError(url, err);
+  results.scrollIntoView({behavior:'smooth',block:'start'});
+
+  const [worker,psi]=await Promise.all([fetchWorker(url),fetchPSI(url)]);
+  stopLoading();
+
+  if(!worker.ok && !psi.ok){
+    showError(url, worker.reason==='no-worker'
+      ? 'No data source is configured yet. Add your Cloudflare Worker URL (and PageSpeed key) in CONFIG.'
+      : ('Could not fetch the page: '+worker.reason));
+    return;
   }
+  const m=newModel();
+  let notes=[];
+  if(worker.ok){ try{ runHtmlChecks(m,worker.data); }catch(err){ notes.push('On-page analysis hit an error.'); } }
+  else if(worker.reason!=='no-worker'){ notes.push('On-page analysis unavailable ('+esc(worker.reason)+').'); }
+  if(psi.ok){ runPSI(m,psi.data); }
+  else if(psi.reason==='no-key'){ notes.push('Add a free PageSpeed Insights API key to include Performance & Core Web Vitals.'); }
+  else{ notes.push('Performance data unavailable ('+esc(psi.reason)+').'); }
+
+  render(m,url, notes.length?notes.join(' '):'');
 });
 </script>
 </body>
