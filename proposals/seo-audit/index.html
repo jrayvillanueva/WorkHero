@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
 <title>Free SEO &amp; AI Search Audit | Work Hero</title>
 <meta name="description" content="Run a free SEO and AI-search audit of your website. Get your scores, Core Web Vitals, on-page findings, and AI-readiness signals in seconds.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -173,7 +174,7 @@ h3{font-size:18px;line-height:1.24;letter-spacing:.4px;}
 
 <header class="nav">
   <div class="logo"><span class="mark"></span>workhero</div>
-  <a class="btn btn-dark btn-book" href="#" data-book>Book a Call</a>
+  <a class="btn btn-dark btn-book" href="#" data-book rel="nofollow noopener noreferrer">Book a Call</a>
 </header>
 
 <section class="hero">
@@ -221,7 +222,7 @@ const CONFIG = {
 
 const $ = (s,r=document)=>r.querySelector(s);
 const results = $('#results');
-document.querySelectorAll('[data-book]').forEach(a=>a.setAttribute('href',CONFIG.BOOKING_URL));
+document.querySelectorAll('[data-book]').forEach(a=>{a.setAttribute('href',CONFIG.BOOKING_URL);a.setAttribute('rel','nofollow noopener noreferrer');});
 
 /* ---------- helpers ---------- */
 function normalizeUrl(v){
@@ -513,7 +514,7 @@ function gateHtml(){
   return '<div class="gate" id="gate"><h2>Want the fixes, not just the findings?</h2>'+
    '<p>You\'ve got the findings and the general fixes. Let Work Hero <b>implement them for you</b> — with the exact changes for your site, plus the keyword strategy, Local &amp; CRO work this scan can\'t cover.</p>'+
    '<form class="gform" id="leadForm"><input type="email" id="leadEmail" placeholder="you@company.com" required aria-label="Email"><button class="btn btn-yellow" type="submit">Email me the full report</button></form>'+
-   '<div class="or">— or —</div><a class="btn btn-dark" href="'+esc(CONFIG.BOOKING_URL)+'" data-book>Book a free strategy call</a>'+
+   '<div class="or">— or —</div><a class="btn btn-dark" href="'+esc(CONFIG.BOOKING_URL)+'" rel="nofollow noopener noreferrer">Book a free strategy call</a>'+
    '<div class="gnote">We\'ll send your full audit and a prioritized fix plan. No spam.</div></div>';
 }
 
@@ -559,7 +560,7 @@ function gateMsg(msg){ const g=$('#gate'); if(!g) return; const f=$('#leadForm')
 function showError(url,msg){
   results.innerHTML='<div class="errbox"><h3>We couldn\'t complete the audit</h3><p><strong>'+esc(msg)+'</strong></p>'+
     '<p>Check the URL is public and reachable (e.g. <b>https://yourbusiness.com</b>), then try again.</p>'+
-    '<a class="btn btn-dark" href="'+esc(CONFIG.BOOKING_URL)+'" style="margin-top:8px">Get a manual audit instead</a></div>';
+    '<a class="btn btn-dark" href="'+esc(CONFIG.BOOKING_URL)+'" rel="nofollow noopener noreferrer" style="margin-top:8px">Get a manual audit instead</a></div>';
 }
 
 /* ---------- submit ---------- */
