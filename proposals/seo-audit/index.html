@@ -62,7 +62,7 @@ h3{font-size:18px;line-height:1.24;letter-spacing:.4px;}
 .form-hint{font-size:12.5px;color:#12305a;margin-top:12px;}
 
 .main{max-width:1000px;margin:0 auto;padding:0 24px 90px;}
-.results{margin-top:-42px;}
+.results{margin-top:-30px;position:relative;z-index:5;scroll-margin-top:16px;}
 .hidden{display:none !important;}
 
 .loading{background:var(--wh-white);border:1px solid var(--wh-grey-light);border-radius:var(--wh-radius-card);padding:44px 28px;text-align:center;box-shadow:0 20px 50px -30px rgba(0,0,0,.4);}
@@ -116,9 +116,9 @@ h3{font-size:18px;line-height:1.24;letter-spacing:.4px;}
 .issue .idesc{font-size:14px;color:var(--wh-grey-dim);margin:8px 0 0;}
 .issue .ifound{font-size:13px;color:var(--wh-black);margin:6px 0 0;}
 .issue .ifound b{font-family:var(--wh-font-display);font-weight:400;}
-.fixlock{margin-top:12px;border:1px dashed #bdbdbd;border-radius:10px;padding:14px 16px;background:#fafafa;}
-.fixlock .flabel{font-family:var(--wh-font-display);font-size:13px;letter-spacing:.4px;display:flex;align-items:center;gap:8px;}
-.fixlock .fblur{margin-top:8px;color:#7a7a7a;font-size:13.5px;filter:blur(4px);user-select:none;}
+.fix{margin-top:10px;background:#f1f8f3;border-left:3px solid var(--wh-green);border-radius:8px;padding:11px 14px;font-size:13.5px;color:#1f3326;}
+.fix .fixlabel{font-family:var(--wh-font-display);font-size:11.5px;letter-spacing:.5px;text-transform:uppercase;color:var(--wh-green);display:block;margin-bottom:3px;}
+.doneforyou{margin-top:8px;font-size:12.5px;color:var(--wh-grey-dim);display:flex;align-items:center;gap:7px;}
 .lockpill{font-size:11px;font-weight:700;background:var(--wh-yellow);color:var(--wh-black);border-radius:var(--wh-radius-pill);padding:3px 10px;}
 
 .passwrap{border-top:1px solid var(--wh-grey-light);margin-top:6px;padding-top:12px;}
@@ -427,13 +427,47 @@ function catScore(m,cat){
 }
 
 /* ---------- render ---------- */
-const FIX_BLUR='Rewrite the element to the exact spec our audit prescribes, apply the correct structured-data pattern, and re-test against the target metric until it passes.';
+const FIXES={
+  // On-page
+  'Title tag length':'Write a unique 15–60 character title that leads with the page\'s primary keyword, then your brand.',
+  'Meta description':'Add a 70–160 character meta description that summarizes the page and includes a clear call to action.',
+  'Single, clear H1':'Keep exactly one <h1> for the main topic and demote the extras to <h2>/<h3>.',
+  'Heading structure':'Organize the page under a clear H1 → H2 → H3 outline so every section has a descriptive heading.',
+  'Image alt text':'Add descriptive alt text to every meaningful image; use empty alt="" for purely decorative ones.',
+  'Open Graph tags':'Add og:title, og:description and og:image so shared links and AI previews render correctly.',
+  'Twitter/X card':'Add twitter:card="summary_large_image" plus twitter:title, description and image tags.',
+  'Content depth':'Expand thin pages to fully cover the topic — aim for 300+ words of genuinely useful content.',
+  // Technical
+  'HTTPS secure':'Install an SSL certificate and force all traffic to https:// with a site-wide 301 redirect.',
+  'No mixed content':'Update any http:// asset URLs to https:// so nothing loads insecurely on the page.',
+  'Page is indexable':'Remove the noindex directive from pages you want ranked (check the robots meta tag and X-Robots-Tag header).',
+  'robots.txt present':'Add a robots.txt at your domain root that allows crawling and links to your XML sitemap.',
+  'XML sitemap present':'Generate an XML sitemap of your key URLs and submit it in Google Search Console.',
+  'Canonical tag':'Add a self-referencing <link rel="canonical"> to each page to consolidate duplicate URLs.',
+  'Mobile viewport':'Add <meta name="viewport" content="width=device-width, initial-scale=1"> for correct mobile rendering.',
+  'Structured data (schema)':'Add JSON-LD schema (Organization plus a page-type schema) so search & AI understand your content.',
+  // Tracking
+  'Google Analytics 4':'Create a GA4 property and install its G- measurement tag (directly or via Tag Manager) to start collecting data.',
+  'No deprecated Universal Analytics':'Remove the old UA- tag and migrate all tracking to GA4.',
+  'Google Tag Manager':'Install Google Tag Manager so you can manage tracking tags without editing site code.',
+  'Search Console verification':'Verify the site in Google Search Console (via meta tag, DNS, or GA) to monitor search performance.',
+  'Meta Pixel':'If you run Meta / Facebook ads, install the Meta Pixel to measure conversions.',
+  // AI readiness
+  'Entity / Organization schema':'Add Organization (or LocalBusiness) JSON-LD with your name, logo and sameAs links.',
+  'FAQ / Q&A schema':'Mark up Q&A content with FAQPage schema so it\'s eligible for AI answers and rich results.',
+  'llms.txt file':'Publish an /llms.txt that points AI crawlers to your most important content.',
+  'Entity sameAs links':'Add sameAs links (social profiles, Wikidata) to your Organization schema to strengthen entity recognition.',
+  'Answerable summary':'Lead each page with a concise 1–2 sentence answer to its main question before the detail.',
+  'Machine-readable structure':'Use a single H1 and a clean heading hierarchy so AI can segment and quote your content.',
+};
 function issueHtml(it){
+  const fix=FIXES[it.title]||'';
   return '<div class="issue"><div class="ihead"><span class="sev sev-'+it.sev+'">'+(it.sev==='high'?'High':it.sev==='medium'?'Medium':'Info')+'</span>'+
     '<span class="ititle">'+esc(it.title)+'</span></div>'+
     (it.found?'<p class="ifound"><b>Found:</b> '+esc(it.found)+'</p>':'')+
     (it.detail?'<p class="idesc">'+esc(it.detail)+'</p>':'')+
-    '<div class="fixlock"><div class="flabel">🔒 How Work Hero fixes this <span class="lockpill">Locked</span></div><div class="fblur">'+esc(FIX_BLUR)+'</div></div></div>';
+    (fix?'<div class="fix"><span class="fixlabel">How to fix</span>'+esc(fix)+'</div>':'')+
+    '<div class="doneforyou">🔒 Work Hero can implement this fix for you.</div></div>';
 }
 function catHtml(m,key){
   const issues=m.f[key]; const passed=m.pass[key]; const score=catScore(m,key);
@@ -474,7 +508,7 @@ const LOCKED_SERVICES=[
 ];
 function gateHtml(){
   return '<div class="gate" id="gate"><h2>Want the fixes, not just the findings?</h2>'+
-   '<p>Your free scan shows <b>what</b> to fix. Get the full report with the exact <b>how</b> — plus your keyword data, Local, and CRO analysis — from the Work Hero team.</p>'+
+   '<p>You\'ve got the findings and the general fixes. Let Work Hero <b>implement them for you</b> — with the exact changes for your site, plus the keyword strategy, Local &amp; CRO work this scan can\'t cover.</p>'+
    '<form class="gform" id="leadForm"><input type="email" id="leadEmail" placeholder="you@company.com" required aria-label="Email"><button class="btn btn-yellow" type="submit">Email me the full report</button></form>'+
    '<div class="or">— or —</div><a class="btn btn-dark" href="'+esc(CONFIG.BOOKING_URL)+'" data-book>Book a free strategy call</a>'+
    '<div class="gnote">We\'ll send your full audit and a prioritized fix plan. No spam.</div></div>';
